@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roblox Troll Central</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #111 0%, #1f1f1f 100%);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;           /* added */
+      flex-direction: column;  /* added */
+    }
+
+    header {
+      width: 100%;
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffea;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #00ffea;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #1f1f1f;
+      padding: 10px 20px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .mobile-menu a {
+      margin: 10px 0;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #00ffea;
+    }
+
+    main {
+      /* CENTER CONTENT BOTH VERTICALLY & HORIZONTALLY */
+      flex-grow: 1;            /* take remaining space */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      margin-top: 60px;       /* compensate for fixed header height */
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+      margin: 0;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+    }
+
+    .button {
+      margin-top: 2rem;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      background: rgba(0, 255, 234, 0.15);
+      color: #00ffea;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0, 255, 234, 0.2), inset 0 0 0 2px #00ffea33;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: rgba(0, 255, 234, 0.3);
+      color: #fff;
+      box-shadow: 0 8px 30px rgba(0, 255, 234, 0.4), inset 0 0 0 2px #00ffea66;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+      }
+      50% {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Roblox Troll Central</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Leaked Guides</a>
+      <a href="#">Verified Scripts</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu" style="display: none;">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Leaked Guides</a>
+      <a href="#">Verified Scripts</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Roblox Troll Central</h1>
+    <p>Welcome to the ultimate hub for Roblox trolls and exploiters. Whether you’re here to cause chaos or just vibe, you’re home now.</p>
+    <button class="button" onclick="window.location.href='https://discord.gg/rblxtrollers'">Join Discord</button>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>
