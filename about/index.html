@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Roblox Troll Central</title>
+  <title>About Me - Roblox Troll Central</title>
   <style>
     * {
       box-sizing: border-box;
@@ -16,8 +16,8 @@
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       min-height: 100vh;
-      display: flex;           /* added */
-      flex-direction: column;  /* added */
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -92,51 +92,27 @@
     }
 
     main {
-      /* CENTER CONTENT BOTH VERTICALLY & HORIZONTALLY */
-      flex-grow: 1;            /* take remaining space */
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 100px 20px 40px;
       text-align: center;
-      margin-top: 60px;       /* compensate for fixed header height */
     }
 
     h1 {
       font-size: 3rem;
       text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-      margin: 0;
+      margin-bottom: 1.5rem;
       animation: pulse 2s infinite;
     }
 
     p {
-      margin-top: 1rem;
       font-size: 1.2rem;
       color: #ccc;
-      max-width: 600px;
-    }
-
-    .button {
-      margin-top: 2rem;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      background: rgba(0, 255, 234, 0.15);
-      color: #00ffea;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 20px rgba(0, 255, 234, 0.2), inset 0 0 0 2px #00ffea33;
-      transition: all 0.3s ease;
-    }
-
-    .button:hover {
-      background: rgba(0, 255, 234, 0.3);
-      color: #fff;
-      box-shadow: 0 8px 30px rgba(0, 255, 234, 0.4), inset 0 0 0 2px #00ffea66;
-      transform: scale(1.05);
+      max-width: 700px;
+      line-height: 1.6;
     }
 
     @keyframes pulse {
@@ -186,19 +162,20 @@
   </header>
 
   <main>
-    <h1>Roblox Troll Central</h1>
-    <p>Welcome to the ultimate hub for Roblox trolls and exploiters. Whether you’re here to cause chaos or just vibe, you’re home now.</p>
-    <button class="button" onclick="window.location.href='https://discord.gg/rblxtrollers'">Join Discord</button>
+    <h1>About</h1>
+    <p>
+      Hello! I'm the creator of Roblox Troll Central, a server for trolling, exploiting, and glitching.
+      <br /><br />
+      I’ve been messing with games since 2020 and always looking for new ways to cause destruction inside Roblox. 
+      <br /><br />
+      Expect tools, guides, and scripts to make your trolling experience better. Whether you're a troll, or an exploiter, you’re in the right place.
+    </p>
   </main>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById("mobileMenu");
-      if (menu.style.display === "flex") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "flex";
-      }
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
   </script>
 </body>
