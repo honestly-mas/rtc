@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RTC – Verification Help</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 140px;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  background: rgba(8,10,18,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.45rem;
+  background: linear-gradient(90deg, #1b6cff, #6fa3ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+}
+
+nav a {
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1b6cff;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after { width: 100%; }
+
+.menu-btn {
+  display: none;
+  margin-left: auto;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #cbd6ff;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  right: 16px;
+  background: rgba(10,12,22,0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  backdrop-filter: blur(14px);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 140px 20px 60px;
+}
+
+.center-box {
+  max-width: 720px;
+  text-align: center;
+}
+
+.center-box h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #6fa3ff;
+}
+
+/* ===== DESCRIPTION ABOVE DROPDOWN ===== */
+.description {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #cbd6ff;
+  line-height: 1.6;
+}
+
+.description a.channel-link {
+  color: #81b7ff;
+  font-weight: 600;
+  background: rgba(27,108,255,0.2);
+  padding: 2px 6px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ===== DROPDOWN ===== */
+.select-container {
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  cursor: pointer;
+}
+
+select option {
+  background: #0b0d17;
+  color: #fff;
+}
+
+/* ===== CONTENT BOX ===== */
+.info-box {
+  background: rgba(20,20,20,0.7);
+  border-radius: 20px;
+  padding: 24px 28px;
+  border: 1px solid rgba(111,163,255,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-top: 20px;
+  display: none;
+  text-align: left;
+}
+
+.info-box h3 {
+  color: #6fa3ff;
+  margin-bottom: 12px;
+}
+
+.info-box p {
+  color: #cbd6ff;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.info-box a {
+  color: #81b7ff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav { display: none; }
+  .menu-btn { display: block; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title">Roblox Troll Central</div>
+  <nav>
+    <a href="https://rblx.xyz/">Home</a>
+    <a href="https://rblx.xyz/guides">Leaked Guides</a>
+    <a href="https://www.roblox.com/communities/14847046/Roblox-Troll-Central">Roblox Group</a>
+    <a href="https://rblx.xyz/about">About</a>
+  </nav>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="https://rblx.xyz/">Home</a>
+  <a href="https://rblx.xyz/guides">Leaked Guides</a>
+  <a href="https://www.roblox.com/communities/14847046/Roblox-Troll-Central">Roblox Group</a>
+  <a href="https://rblx.xyz/about">About</a>
+</div>
+
+<main>
+  <div class="center-box">
+    <h1>Verification Help</h1>
+
+    <p class="description">
+      This is help for verifying in <a href="https://discord.com/channels/1399416880778842273/1407318188370432093" target="_blank" class="channel-link"># ✅・verify</a> 
+      and using Double Counter. <br>Select your issue below to get detailed instructions.
+    </p>
+
+    <div class="select-container">
+      <select id="helpSelect" onchange="showSection()">
+        <option value="">Please select your problem</option>
+        <option value="vpn">VPN Detected</option>
+        <option value="alt">Detected as an Alt</option>
+        <option value="crawlers">Crawlers Not Allowed</option>
+        <option value="other">Other Issues</option>
+      </select>
+    </div>
+
+    <div id="vpn" class="info-box">
+      <h3>VPN Detected</h3>
+      <p>Your connection may appear to be using a VPN depending on certain network factors. Double Counter blocks networks connected to VPNs.</p>
+      <p><strong>Fixes:</strong></p>
+      <ul>
+        <li>Disable ad-blockers or browser extensions that modify network requests.</li>
+        <li>On iPhone/iPad: Disable "Hide IP Address" in Safari and turn off iCloud Private Relay.</li>
+        <li>Switch from privacy browsers (Opera/Brave) to Chrome or Edge.</li>
+        <li>Check for shared/proxy IPs from your ISP using ipinfo.io.</li>
+      </ul>
+      <p><a href="https://rblx.xyz/support" target="_blank">Still need support?</a></p>
+    </div>
+
+    <div id="alt" class="info-box">
+      <h3>Detected as an Alt</h3>
+      <p>Your account shares an IP with another Discord account. If possible, please use that account. Otherwise, if your account is terminated, forgotten password or just can't, <a href="https://rblx.xyz/support" target="_blank">open a support ticket</a>.</p>
+    </div>
+
+    <div id="crawlers" class="info-box">
+      <h3>Crawlers Not Allowed</h3>
+      <p>This block may occur if:</p>
+      <ul>
+        <li>Using Discord's in-app mobile browser — use your default phone browser instead.</li>
+        <li>Using Cloudflare WARP, DNS modifiers, or similar — disable them and retry.</li>
+        <li>Browser extensions or proxy settings alter your fingerprint — temporarily disable them.</li>
+      </ul>
+      <p><a href="https://rblx.xyz/support" target="_blank">Still need support?</a></p>
+    </div>
+
+    <div id="other" class="info-box">
+      <h3>Other Issues</h3>
+      <p>If the following applies, <a href="https://rblx.xyz/support" target="_blank">open a support ticket</a>:</p>
+      <ul>
+        <li>Discord is banned in your country.</li>
+        <li>None of the previous steps work.</li>
+        <li>Your "main" account is terminated.</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function showSection() {
+  const sections = ["vpn","alt","crawlers","other"];
+  const selected = document.getElementById("helpSelect").value;
+  sections.forEach(id => {
+    document.getElementById(id).style.display = id === selected ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
