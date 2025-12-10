@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ wowimred</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #350f0f 0%, #1a0707 45%, #000 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: center;
+  background: rgba(40,5,5,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,50,50,0.06);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #ff1a1a, #ff6666); /* wowimred gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+nav {
+  display: none; /* Top links removed */
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* ===== MAIN ===== */
+main {
+  min-height: 100vh;
+  padding: 140px 20px 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.center-box {
+  max-width: 720px;
+}
+
+.center-box h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: #ff4d4d; /* modern light red */
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #ff9999; /* muted red text */
+  margin-bottom: 34px;
+}
+
+/* ===== CTA BUTTON ===== */
+.join-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff4d4d, #ff7f7f); /* modern red gradient */
+  box-shadow: 0 14px 38px rgba(255,77,77,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.join-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 48px rgba(255,77,77,0.65);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="title">@ wowimred</div>
+</header>
+
+<main>
+  <div class="center-box">
+    
+    <div class="about-text">
+I'm <strong>red</strong> or known as <strong>wowimred</strong>, the other founder of Roblox Troll Central. I've founded RTC since late July, and I reguarly interact with the community. 
+      <br><br>
+My main hobby is around <strong>music</strong> <i>(except gaming, obviously)</i> - I like Tate McRae, Taylor Swift, Olivio Rodgrio, Sabrina Carpenter & sombr.
+    </div>
+
+    <a class="join-btn" href="https://rblx.xyz/about">
+      MORE ABOUT RTC
+    </a>
+    <br><br>
+    <a class="join-btn" href="https://plsdonate.me/RBX_RedPlayz">
+      DONATE TO ME
+    </a>
+  </div>
+</main>
+
+</body>
+</html>
