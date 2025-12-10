@@ -41,6 +41,7 @@ header {
   color: transparent;
 }
 
+/* ===== DESKTOP NAV ===== */
 nav {
   display: flex;
   gap: 26px;
@@ -68,6 +69,37 @@ nav a::after {
 
 nav a:hover::after {
   width: 100%;
+}
+
+/* ===== MOBILE BUTTON ===== */
+.menu-btn {
+  display: none;
+  margin-left: auto;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #cbd6ff;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  right: 16px;
+  background: rgba(10,12,22,0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  backdrop-filter: blur(14px);
+  z-index: 200;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* ===== CENTER ===== */
@@ -121,6 +153,9 @@ main {
   nav {
     display: none;
   }
+  .menu-btn {
+    display: block;
+  }
 }
 </style>
 </head>
@@ -131,12 +166,21 @@ main {
   <div class="title">Roblox Troll Central</div>
 
   <nav>
-    <a href="https://rblx.xyz/">Home</a>
+    <a href="https://rblx.xyz/discord">Join Server</a>
     <a href="https://rblx.xyz/guides">Leaked Guides</a>
-    <a href="https://www.roblox.com/communities/14847046/Roblox-Troll-Central">Roblox Group</a>
+    <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
     <a href="https://rblx.xyz/about">About</a>
   </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="https://rblx.xyz/discord">Join Server</a>
+  <a href="https://rblx.xyz/guides">Leaked Guides</a> 
+  <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+  <a href="https://rblx.xyz/about">About</a>
+</div>
 
 <main>
   <div class="center-box">
@@ -151,6 +195,13 @@ main {
     </a>
   </div>
 </main>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
