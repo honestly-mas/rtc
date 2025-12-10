@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punishments – RTC</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 140px;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  background: rgba(8,10,18,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.45rem;
+  background: linear-gradient(90deg, #1b6cff, #6fa3ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+}
+
+nav a {
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1b6cff;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after { width: 100%; }
+
+.menu-btn {
+  display: none;
+  margin-left: auto;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #cbd6ff;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  right: 16px;
+  background: rgba(10,12,22,0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  backdrop-filter: blur(14px);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 20px 60px;
+}
+
+.center-box {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.center-box h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #cbd6ff;
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
+
+/* ===== SEPARATOR ===== */
+.separator {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: rgba(111,163,255,0.25);
+  margin: 16px 0;
+}
+
+/* ===== LINKS BELOW DESCRIPTION ===== */
+.links-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.links-row a {
+  color: #81b7ff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ===== COLUMNS ===== */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.column {
+  background: rgba(20,20,20,0.75);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(111,163,255,0.25);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.column h3 {
+  color: #6fa3ff;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.column p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cbd6ff;
+  margin-bottom: 12px;
+}
+
+.column ul {
+  list-style: none;
+}
+
+.column ul li {
+  background: rgba(27,108,255,0.1);
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav { display: none; }
+  .menu-btn { display: block; }
+  .links-row { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="title">Roblox Troll Central</div>
+
+  <nav>
+    <a href="https://rblx.xyz/discord">Join Server</a>
+    <a href="https://rblx.xyz/guides">Leaked Guides</a>
+    <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+    <a href="https://rblx.xyz/about">About</a>
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="https://rblx.xyz/discord">Join Server</a>
+  <a href="https://rblx.xyz/guides">Leaked Guides</a> 
+  <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+  <a href="https://rblx.xyz/about">About</a>
+</div>
+
+<main>
+  <div class="center-box">
+    <h1>Punishments</h1>
+    <p class="description">
+      All violations follow a punishment track from <b>Warn → 1h Mute → 1d Mute → Kick → 7d Mute → Ban.</b><br>
+      Some violations skip directly to stricter actions depending on severity.
+    </p>
+
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <!-- Links -->
+    <div class="links-row">
+      <a href="https://rblx.xyz/discord-guidelines" target="_blank">Discord Guidelines</a>
+      <a href="https://rblx.xyz/support" target="_blank">Appeals & Support Server</a>
+    </div>
+
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <div class="columns">
+      <!-- Punishment Track -->
+      <div class="column">
+        <h3>Punishment Track</h3>
+        <ul>
+          <li>Disrespect</li>
+          <li>Channel Misuse</li>
+          <li>Other Languages</li>
+          <li>Brainrot</li>
+          <li>Misusing Bots</li>
+          <li>Non-Pingable Names</li>
+        </ul>
+      </div>
+
+      <!-- Skip to 1h Mute -->
+      <div class="column">
+        <h3>Skip to 1h Mute</h3>
+        <ul>
+          <li>Drama</li>
+          <li>Spamming</li>
+          <li>Disrupting Peace</li>
+          <li>Death Wishes</li>
+          <li>Sensitive Topics</li>
+        </ul>
+      </div>
+
+      <!-- Skip to 1d Mute -->
+      <div class="column">
+        <h3>Skip to 1d Mute</h3>
+        <ul>
+          <li>Mass & Mention Spam</li>
+          <li>Leaking Small Confidential Info</li>
+        </ul>
+      </div>
+
+      <!-- Skip to Ban -->
+      <div class="column">
+        <h3>Skip to Ban</h3>
+        <ul>
+          <li>Siding on Blacklisted Users / Servers</li>
+          <li>Discrimination / Racism</li>
+          <li>Self-Bots</li>
+          <li>Underage</li>
+          <li>Death Threats</li>
+          <li>Hacked Account (Softban)</li>
+          <li>Leaking Confidential Info</li>
+          <li>DM Advertising</li>
+          <li>Washiez Supervision Team or Roleplay Worker</li>
+        </ul>
+      </div>
+
+      <!-- Blacklist -->
+      <div class="column">
+        <h3>Blacklist</h3>
+        <ul>
+          <li>Recommending Self Harm</li>
+          <li>3 Violations After Unban</li>
+          <li>Sexting</li>
+          <li>NSFW & Porn</li>
+          <li>Raiding</li>
+          <li>Doxxing</li>
+          <li>Spying</li>
+          <li>Serve Discord ToS Violations</li>
+          <li>Alting</li>
+          <li>Illegal Content</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
