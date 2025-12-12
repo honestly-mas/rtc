@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Partners – RTC</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 140px;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  background: rgba(8,10,18,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.45rem;
+  background: linear-gradient(90deg, #1b6cff, #6fa3ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+}
+
+nav a {
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1b6cff;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after { width: 100%; }
+
+.menu-btn {
+  display: none;
+  margin-left: auto;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #cbd6ff;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  right: 16px;
+  background: rgba(10,12,22,0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  backdrop-filter: blur(14px);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 0;
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 20px 60px;
+}
+
+.center-box {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.center-box h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #cbd6ff;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+/* ===== PARTNER CARDS ===== */
+.partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.partner-card {
+  background: rgba(20,20,20,0.75);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(111,163,255,0.25);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+  text-align: center;
+}
+
+.partner-card img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(111,163,255,0.3);
+}
+
+.partner-card h3 {
+  color: #6fa3ff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.partner-card p {
+  color: #cbd6ff;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.partner-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(27,108,255,0.18);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid rgba(111,163,255,0.35);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.partner-card a:hover {
+  background: rgba(27,108,255,0.35);
+  transform: scale(1.04);
+}
+
+/* ===== SEPARATOR ===== */
+.separator {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: rgba(111,163,255,0.25);
+  margin: 40px auto 20px;
+}
+
+/* ===== REQUIREMENTS ===== */
+.requirements {
+  text-align: center;
+  color: #cbd6ff;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.requirements ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.requirements li {
+  margin-bottom: 6px;
+  font-size: 0.97rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav { display: none; }
+  .menu-btn { display: block; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://rblx.xyz" class="title" style="text-decoration:none;">Roblox Troll Central</a>
+
+  <nav>
+    <a href="https://rblx.xyz/discord">Join Server</a>
+    <a href="https://rblx.xyz/guides">Leaked Guides</a>
+    <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+    <a href="https://rblx.xyz/about">About</a>
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="https://rblx.xyz/discord">Join Server</a>
+  <a href="https://rblx.xyz/guides">Leaked Guides</a> 
+  <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+  <a href="https://rblx.xyz/about">About</a>
+</div>
+
+<main>
+  <div class="center-box">
+    <h1>Our Partners</h1>
+    <p class="description">
+      We collaborate with communities that share our passion for entertainment, professionalism, and strong engagement.  
+      Below are some of the amazing groups partnered with RTC.
+    </p>
+
+    <div class="partners">
+
+      <!-- Partner 1 -->
+      <div class="partner-card">
+        <img src="https://rblx.xyz/images/placeholder.png" alt="Exefy">
+        <h3>Exefy</h3>
+        <p>
+          Exefy provides strong moderation, a well-built server, fast support,  
+          custom Discord bots, and open staff applications.
+        </p>
+        <a href="https://discord.gg/MgtrVN23ya" target="_blank">Join Server</a>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="partner-card">
+        <img src="https://rblx.xyz/images/p/ps.png" alt="Parker's Shuttle">
+        <h3>Parker's Shuttle</h3>
+        <p>
+          Become a troller and join one of the most fun Roblox communities  
+          made for trolling, humor, and entertainment!
+        </p>
+        <a href="https://discord.gg/Zdp4sHccGv" target="_blank">Join Server</a>
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="partner-card">
+        <img src="https://rblx.xyz/images/p/wt.png" alt="Washiez Trollers">
+        <h3>Washiez Trollers</h3>
+        <p>
+          A community built around trolling Washiez workers — filled with  
+          exploits, glitchers, and active trollers.
+        </p>
+        <a href="https://discord.gg/hvwGTGrKbH" target="_blank">Join Server</a>
+      </div>
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="requirements">
+      <h3>Partnership Requirements</h3>
+      <ul>
+In order to partner, you're required to meet requirements: Over 100 members, an active community with consistent engagement, willing to collaborate on events or giveaways and be a safe for work server.
+    </div>
+
+  </div>
+</main>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
