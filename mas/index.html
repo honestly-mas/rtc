@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ honestly_mas</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #e6fff4 0%, #ccffe6 45%, #b3ffd9 100%);
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: center;
+  background: rgba(200, 255, 220, 0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(100, 200, 150, 0.3);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #55ffaa, #88ffc0); /* minty gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+nav { display: none; }
+
+.menu-btn { display: none; }
+
+/* ===== MAIN ===== */
+main {
+  min-height: 100vh;
+  padding: 140px 20px 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.center-box {
+  max-width: 720px;
+}
+
+.center-box h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: #33cc88; /* dark mint */
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #206644; /* muted green text */
+  margin-bottom: 34px;
+}
+
+/* ===== CTA BUTTON ===== */
+.join-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #33cc88, #66e6aa);
+  box-shadow: 0 14px 38px rgba(51,204,136,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.join-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 48px rgba(51,204,136,0.65);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-btn { display: none; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="title">@ honestly_mas</div>
+</header>
+
+<main>
+  <div class="center-box">
+    <div class="about-text">
+      I'm <strong>honestly_mas</strong>. I like Taylor and Sabrina.<br>
+      I'm gay <i>(mlm)</i>.
+    </div>
+
+    <a class="join-btn" href="https://rblx.xyz/about">
+      MORE ABOUT RTC
+    </a>
+  </div>
+</main>
+
+</body>
+</html>
