@@ -7,9 +7,7 @@
 <link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -40,7 +38,6 @@ header {
   color: transparent;
 }
 
-/* ===== TOP NAV ===== */
 nav {
   display: flex;
   gap: 26px;
@@ -48,30 +45,13 @@ nav {
 }
 
 nav a {
-  color: #a6c8ff; /* brighter for readability */
+  color: #a6c8ff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  position: relative;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #1b6cff;
-  transition: width 0.25s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-  color: #ffffff;
-}
-
-/* ===== MAIN CONTENT ===== */
+/* ===== MAIN ===== */
 main {
   padding: 140px 20px 80px;
   display: flex;
@@ -91,46 +71,41 @@ h1 {
 .summary {
   color: #cbd6ff;
   line-height: 1.7;
-  margin-bottom: 0; /* no spacing before first rule */
+  margin-bottom: 36px;
 }
 
-/* ===== RULES ===== */
+/* ===== RULE ===== */
 .rule {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
-.rule strong {
+.rule h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #6fa3ff;
+  margin-bottom: 6px;
 }
 
 .rule p {
-  margin: 6px 0 0;
   color: #d7e0ff;
-  line-height: 1.6;
+  line-height: 1.65;
+  margin: 0;
 }
 
-.rule a {
-  color: #81b7ff; /* brighter for visibility */
-  text-decoration: underline;
-}
-
-/* ===== SEPARATOR ===== */
-.separator {
-  margin-top: 10px;
+/* ===== FOOTER NOTE ===== */
+.note {
+  margin-top: 48px;
+  padding-top: 18px;
   border-top: 1px solid rgba(111,163,255,0.35);
-  padding-top: 16px;
+  font-size: 0.95rem;
   color: #d7e0ff;
   line-height: 1.6;
-  font-size: 0.95rem;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   main {
     padding: 160px 16px 60px;
-  }
-  nav {
-    gap: 18px;
   }
 }
 </style>
@@ -140,7 +115,6 @@ h1 {
 
 <header>
   <div class="title">Roblox Troll Central</div>
-
   <nav>
     <a href="https://rblx.xyz/punishments">Punishment Guide</a>
     <a href="https://rblx.xyz/support">Appeals & Support</a>
@@ -153,69 +127,105 @@ h1 {
     <h1>Discord Guidelines</h1>
 
     <p class="summary">
-      These guidelines exist to keep RTC safe, fair, and enjoyable for everyone.
-      Failure to follow these rules may result in warnings, mutes, kicks, or bans.
-      Moderators have final say in all situations.
+      These guidelines explain what is and isn’t allowed within Roblox Troll Central.
+      They exist to keep the community welcoming, safe, and enjoyable for everyone.
+      Moderators may act if behavior disrupts the server or violates Discord’s policies.
     </p>
-	<br>
+
+    <!-- RULES -->
     <div class="rule">
-      <strong>1️⃣ Respect</strong>
-      <p>Do not troll or annoy people within the server. Racism, homophobia, death wishes, threats, or any racist slurs are strictly prohibited.</p>
+      <h2>Disrespect</h2>
+      <p>Harassment, insults, targeting users, or being intentionally hostile toward others is not allowed.</p>
     </div>
 
     <div class="rule">
-      <strong>2️⃣ Advertising</strong>
-      <p>Advertising of any kind (including social media, websites, or Discord servers) is not allowed without permission. Links in nicknames are also not permitted.</p>
+      <h2>Channel Misuse</h2>
+      <p>Use channels only for their intended purpose and follow pinned messages or channel descriptions.</p>
     </div>
 
     <div class="rule">
-      <strong>3️⃣ Drama</strong>
-      <p>Do not create or bring drama into the server. Debates should be taken to DMs. Avoid sensitive topics entirely.</p>
+      <h2>Other Languages</h2>
+      <p>English should be used unless a channel explicitly allows other languages.</p>
     </div>
 
     <div class="rule">
-      <strong>4️⃣ Spam</strong>
-      <p>Spamming is not allowed. This includes chat flooding, excessive mentions, and DM spamming. Moderation may extend to direct messages if necessary.</p>
+      <h2>Brainrot</h2>
+      <p>Excessive low-effort memes, spam phrases, or repetitive content that disrupts discussion is not allowed.</p>
     </div>
 
     <div class="rule">
-      <strong>5️⃣ Brainrot</strong>
-      <p>Avoid posting brainrot content or repeated annoying memes. Accidents are understandable, but repeated behavior will be moderated.</p>
+      <h2>Misusing Bots</h2>
+      <p>Do not abuse bots, commands, reactions, or automated systems.</p>
     </div>
 
     <div class="rule">
-      <strong>6️⃣ Server Usage</strong>
-      <p>Use channels as intended. Read pinned messages and channel topics. Do not misuse bots or server features.</p>
+      <h2>Non-Pingable Names</h2>
+      <p>Usernames or nicknames must be readable and pingable. Excessive symbols or blank names are not allowed.</p>
     </div>
 
     <div class="rule">
-      <strong>7️⃣ Dating</strong>
-      <p>Flirting and e-dating are not allowed. Do not make other members uncomfortable.</p>
+      <h2>Small Advertising</h2>
+      <p>Indirect promotion, subtle ads, or links in names/profiles without permission are not allowed.</p>
     </div>
 
     <div class="rule">
-      <strong>8️⃣ NSFW</strong>
-      <p>NSFW or adult content is strictly forbidden. Posting pornography may endanger minors and will result in an immediate ban.</p>
+      <h2>Drama</h2>
+      <p>Do not start or bring drama into the server. Personal conflicts should be kept out of RTC.</p>
     </div>
 
     <div class="rule">
-      <strong>9️⃣ 13+</strong>
-      <p>Discord requires users to be 13+. Joking about being underage may still result in a ban due to enforcement requirements.
-      <a href="https://discord.com/terms" target="_blank">Discord Terms</a></p>
+      <h2>Spamming</h2>
+      <p>Message flooding, emoji spam, repeated messages, or excessive pinging is prohibited.</p>
     </div>
 
     <div class="rule">
-      <strong>🔟 Terms</strong>
-      <p>Discord’s
-        <a href="https://discord.com/terms" target="_blank">Terms of Service</a>
-        and
-        <a href="https://discord.com/guidelines" target="_blank">Community Guidelines</a>
-        must be followed at all times.
-      </p>
+      <h2>Disrupting Peace</h2>
+      <p>Intentionally causing chaos, derailing conversations, or provoking others is not tolerated.</p>
     </div>
 
-    <div class="separator">
-      ⚠️ These rules are not exhaustive. Use common sense. Moderators reserve the right to moderate at their discretion. Do not attempt to loophole rules.
+    <div class="rule">
+      <h2>Death Wishes & Threats</h2>
+      <p>Wishing harm, death, or threatening others — even as a joke — is strictly prohibited.</p>
+    </div>
+
+    <div class="rule">
+      <h2>Sensitive Topics</h2>
+      <p>Avoid discussions involving politics, religion, real-world violence, or other sensitive topics.</p>
+    </div>
+
+    <div class="rule">
+      <h2>Advertising</h2>
+      <p>Major advertising, DM advertising, or server promotions are not allowed without staff approval.</p>
+    </div>
+
+    <div class="rule">
+      <h2>NSFW & Porn</h2>
+      <p>Sexual content, pornography, or explicit material is not allowed under any circumstances.</p>
+    </div>
+
+    <div class="rule">
+      <h2>Discrimination & Racism</h2>
+      <p>Any form of discrimination, hate speech, or slurs is strictly forbidden.</p>
+    </div>
+
+    <div class="rule">
+      <h2>Illegal Content</h2>
+      <p>Content involving illegal activity, doxxing, hacking, or self-harm encouragement is prohibited.</p>
+    </div>
+    
+    <div class="rule">
+      <h2>Don't take us seriously — or anything</h2>
+      <p>We are a trolling server. Anything within our server should not be taken seriously. We may moderate when it goes too far.</p>
+    </div>
+    
+    <div class="rule">
+      <h2>Discord Terms of Service</h2>
+      <p>All users must comply with Discord’s Terms of Service and Community Guidelines at all times.</p>
+    </div>
+
+    <div class="note">
+      ⚠️ These guidelines are not exhaustive. Staff may intervene in situations not explicitly listed.
+      Attempting to exploit loopholes or argue semantics may result in moderation.
     </div>
 
   </div>
