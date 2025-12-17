@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trial Moderation – RTC</title>
+<link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
+  color: #ffffff;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  background: rgba(8,10,18,0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 100;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.45rem;
+  background: linear-gradient(90deg, #1b6cff, #6fa3ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+}
+
+nav a {
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #1b6cff;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 140px 20px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 900px;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.intro {
+  color: #cbd6ff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #6fa3ff;
+  margin-bottom: 14px;
+}
+
+.section p,
+.section li {
+  color: #d7e0ff;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.section ul {
+  padding-left: 18px;
+}
+
+.section li {
+  margin-bottom: 8px;
+}
+
+/* ===== COMMAND BOX ===== */
+.commands {
+  background: rgba(20,20,20,0.7);
+  border: 1px solid rgba(111,163,255,0.25);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.commands code {
+  display: block;
+  background: rgba(27,108,255,0.12);
+  border: 1px solid rgba(111,163,255,0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #81b7ff;
+  text-decoration: underline;
+}
+
+/* ===== FOOTER NOTE ===== */
+.note {
+  margin-top: 30px;
+  border-top: 1px solid rgba(111,163,255,0.35);
+  padding-top: 16px;
+  font-size: 0.95rem;
+  color: #cbd6ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="https://rblx.xyz" class="title" style="text-decoration:none;">Roblox Troll Central</a>
+
+  <nav>
+    <a href="https://rblx.xyz/discord">Join Server</a>
+    <a href="https://rblx.xyz/guides">Leaked Guides</a> 
+    <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+    <a href="https://rblx.xyz/about">About</a>
+  </nav>
+</header>
+
+<main>
+  <div class="content">
+
+    <h1>Trial Moderation</h1>
+    <small>The following is not deemed confidential and is public.</small> <br>
+    
+    <p class="intro">
+      Congratulations on passing your staff application and becoming a <strong>Trial Moderator</strong>.
+      This stage is designed to evaluate your activity, judgment, and professionalism within the RTC community.
+    </p>
+
+    <div class="section">
+      <h2>How to Pass</h2>
+      <ul>
+        <li>Be active and visible within the server</li>
+        <li>Show your moderation skills clearly and consistently</li>
+        <li>Moderate regularly and fairly</li>
+        <li>Engage with the community in a positive manner</li>
+        <li>Ask questions if you are unsure about a situation</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Commands</h2>
+      <p>The command prefix is <strong>!</strong>. Trial moderators have access to the following commands:</p>
+
+      <div class="commands">
+        <code>!warn &lt;user&gt; &lt;reason&gt;</code>
+        <code>!mute &lt;user&gt; &lt;time&gt; &lt;reason&gt;</code>
+        <code>!modlogs &lt;user&gt;</code>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Guidelines</h2>
+      <ul>
+        <li>Follow and regularly re-read all RTC policies:
+          <a href="https://rblx.xyz/tos" target="_blank">Terms of Service</a>,
+          <a href="https://rblx.xyz/discord-guidelines" target="_blank">Discord Guidelines</a>,
+          <a href="https://rblx.xyz/punishments" target="_blank">Punishment Guide</a>
+        </li>
+        <li>You must be present in the support server:
+          <a href="https://rblx.xyz/support" target="_blank">rblx.xyz/support</a>
+        </li>
+        <li>Remain active in public channels</li>
+        <li>Moderate regularly and consistently</li>
+        <li>If a punishment is out of your reach (kick or ban), ask a Manager+ in trial chat</li>
+        <li>Always double-check the punishment guide before acting</li>
+        <li>Maintain professionalism at all times</li>
+        <li>You are advised (but not required) to attend RTC events</li>
+      </ul>
+    </div>
+
+    <div class="note">
+      Trial Moderation is a review period. Consistent performance, good judgment, and respectful behavior
+      will significantly increase your chances of promotion.
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
+
