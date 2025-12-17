@@ -15,8 +15,6 @@ body {
   background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
   color: #fff;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
   padding-top: 140px;
 }
 
@@ -97,7 +95,7 @@ nav a:hover::after { width: 100%; }
   font-weight: 600;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* ===== MAIN CONTENT FLEX ===== */
 main {
   width: 100%;
   display: flex;
@@ -105,23 +103,33 @@ main {
   padding: 140px 20px 60px;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  align-items: flex-start;
+}
+
 .center-box {
-  max-width: 720px;
+  flex: 1 1 300px;
+  max-width: 400px;
   text-align: center;
 }
 
 .center-box h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   font-weight: 900;
-  margin-bottom: 18px;
-  color: #fff; /* White title */
+  margin-bottom: 12px;
+  color: #fff;
 }
 
 .center-box p {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #cbd6ff;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .social-list {
@@ -148,9 +156,9 @@ main {
 }
 
 .social-list img {
-  width: 35px;    
-  height: auto;     
-  max-height: 35px; 
+  width: 35px;
+  height: auto;
+  max-height: 35px;
   filter: invert(57%) sepia(100%) saturate(514%) hue-rotate(191deg) brightness(100%) contrast(95%);
 }
 
@@ -165,10 +173,49 @@ main {
   text-decoration: underline;
 }
 
+/* ===== TIKTOK EMBED ===== */
+.tiktok-container {
+  flex: 0 0 320px;
+  text-align: center;
+}
+
+.tiktok-container iframe {
+  width: 100%;
+  height: 533px;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.tiktok-extra-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(27,108,255,0.18);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1px solid rgba(111,163,255,0.35);
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.tiktok-extra-btn:hover {
+  background: rgba(27,108,255,0.35);
+  transform: scale(1.05);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   nav { display: none; }
   .menu-btn { display: block; }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tiktok-container iframe {
+    height: 400px;
+  }
 }
 </style>
 </head>
@@ -193,32 +240,43 @@ main {
 </div>
 
 <main>
-  <div class="center-box">
-    <h1>Our Socials</h1>
-    <p>Check out our official social platforms to stay updated with RTC, join our community, and get the latest content!</p>
+  <div class="flex-container">
+    <!-- Socials -->
+    <div class="center-box">
+      <h1>Our Socials</h1>
+      <p>Check out our official social platforms to stay updated with RTC, join our community, and get the latest content!</p>
 
-    <ul class="social-list">
-      <li>
-        <img src="https://rblx.xyz/images/discord.png" alt="Discord">
-        <a href="https://rblx.xyz/discord" target="_blank">Discord</a>
-      </li>
-      <li>
-        <img src="https://rblx.xyz/images/roblox.png" alt="Roblox Group">
-        <a href="https://rblx.xyz/robloxgroup" target="_blank">Roblox Group</a>
-      </li>
-      <li>
-        <img src="https://rblx.xyz/images/shorts.png" alt="YouTube">
-        <a href="https://www.youtube.com/@join_rtc" target="_blank">YT Shorts</a>
-      </li>
-      <li>
-        <img src="https://rblx.xyz/images/tiktok.png" alt="TikTok Main">
-        <a href="https://www.tiktok.com/@trashiezhater" target="_blank">TikTok (Main)</a>
-      </li>
-      <li>
-        <img src="https://rblx.xyz/images/tiktok.png" alt="TikTok Extra">
-        <a href="https://www.tiktok.com/@join_rtc" target="_blank">TikTok (Extra)</a>
-      </li>
-    </ul>
+      <ul class="social-list">
+        <li>
+          <img src="https://rblx.xyz/images/discord.png" alt="Discord">
+          <a href="https://rblx.xyz/discord" target="_blank">Discord</a>
+        </li>
+        <li>
+          <img src="https://rblx.xyz/images/roblox.png" alt="Roblox Group">
+          <a href="https://rblx.xyz/robloxgroup" target="_blank">Roblox Group</a>
+        </li>
+        <li>
+          <img src="https://rblx.xyz/images/shorts.png" alt="YouTube">
+          <a href="https://www.youtube.com/@join_rtc" target="_blank">YT Shorts</a>
+        </li>
+        <li>
+          <img src="https://rblx.xyz/images/tiktok.png" alt="TikTok Main">
+          <a href="https://www.tiktok.com/@trashiezhater" target="_blank">TikTok (Main)</a>
+        </li>
+        <li>
+          <img src="https://rblx.xyz/images/tiktok.png" alt="TikTok Extra">
+          <a href="https://www.tiktok.com/@join_rtc" target="_blank">TikTok (Extra)</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- TikTok Embed -->
+    <div class="tiktok-container">
+      <h2>TikTok Highlight</h2>
+      <p>Check out our latest TikTok video!</p>
+      <iframe id="tiktokEmbed" allowfullscreen></iframe>
+      <br>
+    </div>
   </div>
 </main>
 
@@ -227,6 +285,16 @@ function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
+
+// Random TikTok embed selection
+const tiktokVideos = [
+  "https://www.tiktok.com/embed/7533131852974935326",
+  "https://www.tiktok.com/embed/7531868894575824159",
+  "https://www.tiktok.com/embed/7532136365681691934"
+];
+
+const randomIndex = Math.floor(Math.random() * tiktokVideos.length);
+document.getElementById("tiktokEmbed").src = tiktokVideos[randomIndex];
 </script>
 
 </body>
