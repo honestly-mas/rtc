@@ -3,23 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Redirecting</title>
+<title>RTC – Leaked Guides</title>
 <link rel="icon" type="image/png" href="https://rblx.xyz/images/rtclogo.png">
 
-<!-- ✅ Auto redirect after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://github.com/red-wow/Guides">
-
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
   background: radial-gradient(circle at top, #0f1c35 0%, #07080d 45%, #000 100%);
-  color: #ffffff;
-  min-height: 100vh;
+  color: #fff;
 }
 
 /* ===== HEADER ===== */
@@ -44,46 +38,100 @@ header {
   color: transparent;
 }
 
-/* ===== CENTER CONTENT ===== */
-main {
-  min-height: 100vh;
-  padding: 140px 20px 40px;
+nav {
   display: flex;
-  align-items: center;
+  gap: 26px;
+  margin-left: auto;
+}
+
+nav a {
+  color: #cbd6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 140px 20px 80px;
+  display: flex;
   justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
   text-align: center;
 }
 
-.center-box {
-  max-width: 640px;
-}
-
-.center-box h1 {
+h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   font-weight: 900;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .description {
-  font-size: 1.05rem;
   color: #cbd6ff;
-  line-height: 1.6;
+  margin-bottom: 32px;
 }
 
-/* ===== FALLBACK LINK ===== */
-.fallback {
-  margin-top: 28px;
-  font-size: 0.95rem;
-  color: #9fb4ff;
+/* ===== BUTTONS ===== */
+.guide-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 32px;
 }
 
-.fallback a {
-  color: #6fa3ff;
-  text-decoration: none;
+.guide-buttons button {
+  padding: 12px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(111,163,255,0.35);
+  background: rgba(27,108,255,0.18);
+  color: #fff;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.fallback a:hover {
+.guide-buttons button:hover {
+  background: rgba(27,108,255,0.35);
+}
+
+/* ===== GUIDES ===== */
+.guides h2 {
+  color: #6fa3ff;
+  margin-bottom: 16px;
+}
+
+.guide-list {
+  list-style: none;
+  padding: 0;
+}
+
+.guide-list li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(20,20,20,0.7);
+  border-radius: 14px;
+  padding: 14px 20px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(111,163,255,0.25);
+}
+
+.guide-list img {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+}
+
+.guide-list a {
+  color: #81b7ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.guide-list a:hover {
   text-decoration: underline;
 }
 </style>
@@ -93,22 +141,126 @@ main {
 
 <header>
   <div class="title">Roblox Troll Central</div>
+  <nav>
+    <a href="https://rblx.xyz/">Home</a>
+    <a href="https://rblx.xyz/guides">Leaked Guides</a>
+    <a href="https://rblx.xyz/robloxgroup">Roblox Group</a>
+    <a href="https://rblx.xyz/about">About</a>
+  </nav>
 </header>
 
 <main>
-  <div class="center-box">
-    <h1>Redirecting</h1>
-    <p class="description">
-      You are being redirected to the page you requested.
-      This should only take a moment.
-    </p>
+  <div class="container">
+    <h1>Leaked Guides</h1>
+    <p class="description">Select a category to view leaked guides.</p>
 
-    <div class="fallback">
-      Not redirected?  
-      <a href="https://github.com/red-wow/Guides">Click here</a>
+    <div class="guide-buttons">
+      <button onclick="loadGuides('kohau')">Kohau Guides</button>
+      <button onclick="loadGuides('frappe')">Frappe Guides</button>
+      <button onclick="loadGuides('washiez')">Washiez Guides</button>
+      <button onclick="loadGuides('pastriez')">Pastriez Guides</button>
+      <button onclick="loadGuides('bloxton')">Bloxton Guides</button>
+    </div>
+
+    <div class="guides">
+      <h2 id="guideTitle">Guides</h2>
+      <ul class="guide-list" id="guideList">
+        <li>Select a category above.</li>
+      </ul>
     </div>
   </div>
 </main>
 
+<script>
+/*
+==================================================
+EDIT GUIDES HERE ONLY
+Each category is fully independent.
+==================================================
+*/
+
+const guides = {
+
+  kohau: {
+    image: "https://rblx.xyz/images/kohau.png",
+    items: [
+      { name: "Public Handbook", link: "https://devforum.roblox.com/t/koha%C3%BA-public-handbook/311850" },
+      { name: "Document Portal", link: "https://docs.google.com/document/d/1h0SrfmW5_aTvUcRy8jZyMJcSFL8MePw56FpUbhYZ2dk/edit?tab=t.0" }
+    ]
+  },
+
+  frappe: {
+    image: "https://rblx.xyz/images/frappe.png",
+    items: [
+      { name: "Main Handbook", link: "https://devforum.roblox.com/t/frapp%C3%A9-main-handbook/1983933" },
+      { name: "Devforum Guides", link: "https://github.com/red-wow/Guides/blob/main/Frappe/Devforum%20Guides.md" },
+      { name: "Host Schedule", link: "https://trello.com/b/IJ5fvDh9/frappe-host-schedule" },
+      { name: "More Guides", link: "https://github.com/red-wow/Guides/tree/main/Frappe" }
+    ]
+  },
+
+  washiez: {
+    image: "https://rblx.xyz/images/washiez.png",
+    items: [
+      { name: "Main Handbook", link: "https://docs.google.com/document/d/1Us81Gp-PKvuiDXlb7nFScdxEooiJrw9jkMWaxa2NCzc/edit?tab=t.0#heading=h.qb56zs797a44" },
+      { name: "Human Resources Guide", link: "(https://docs.google.com/document/d/1Dynjx2U2wZr0A287s3pTR6DvFPfIW9XkjzsWA5PwdbE/edit?tab=t.0#heading=h.jduc3gs8dlzu" },
+      { name: "Public Relations Guide", link: "https://docs.google.com/document/d/1g-d_mICwdGau5zpDYoPhZ-d3uelEfnGGX4JSrw_sZSg/edit?tab=t.0#heading=h.jduc3gs8dlzu" },
+      { name: "Operations Guide", link: "https://docs.google.com/document/d/17mHNElkOitlK_HdpEp0qT59N5Dwygirqr7MzunNcIJk/edit?tab=t.0" },
+      { name: "Consequential Guide", link: "https://docs.google.com/document/d/1_mJsafpZ_QD-DanIhJeI4FKUkRbVfC0rSTQotHmSXKI/edit" },
+      { name: "Washiez Compliance", link: "https://trello.com/b/EEAZcVHw/washiez-compliance" },
+      { name: "OPD Quiz", link: "https://docs.google.com/document/d/17mHNElkOitlK_HdpEp0qT59N5Dwygirqr7MzunNcIJk/edit?tab=t.0" },
+      { name: "CAO Form", link: "https://docs.google.com/forms/d/e/1FAIpQLScosZWU8fqJUzZEAIMq0zwo7605ji6H3TseoNw_fpso0_4Jag/viewform" },
+      { name: "Appeal Form", link: "https://docs.google.com/forms/d/e/1FAIpQLScfCnFEbjZnTXETEZkwMexjhwftGScJGfwuJFULk31wiqvmIw/viewform" },
+      { name: "Backup of Washiez Guides", link: "https://github.com/red-wow/Guides/tree/main/Washiez" },
+    ]
+  },
+
+  pastriez: {
+    image: "https://rblx.xyz/images/placeholder.png",
+    items: [
+      { name: "Staff Assistant Application", link: "https://docs.google.com/forms/d/e/1FAIpQLSdhkndmswOHvoq96-X4pcyZvvroGDYSj8ummSFJCUptzWybPw/viewform?fbzx=-1751601983198462763" },
+      { name: "Admin Usuage Guide", link: "https://devforum.roblox.com/t/pastriez-bakery-admin-usage-guide/311953" },
+      { name: "Kitchen Leader Guide", link: "https://rblx.xyz/guides/Pastriez_KLGuide.pdf" },
+      { name: "Staff Policy", link: "https://devforum.roblox.com/t/pastriez-bakery-staff-policy/317884" },
+      { name: "Kitchen Leader Assistant Guide", link: "https://docs.google.com/document/d/1jEploAaR6o5YInvgYckp5ySK9G3In8RH/edit" },
+    ]
+  },
+
+  bloxton: {
+    image: "https://rblx.xyz/images/bloxton.png",
+    items: [
+      { name: "Head Portal Meeting Notes", link: "https://rblx.xyz/guides/bloxton/HeadPortalMeeting.pdf" },
+      { name: "Hotels Head Guide", link: "https://rblx.xyz/guides/bloxton/HotelsHeadGuide.pdf" },
+      { name: "Hotels Helper Guide", link: "https://rblx.xyz/guides/bloxton/HotelsHelperGuide.pdf" },
+      { name: "MR FAQ", link: "https://rblx.xyz/guides/bloxton/MRFAQ.pdf" },
+      { name: "MR Rules & Expectations", link: "https://rblx.xyz/guides/bloxton/MRRulesAndExpectations.txt" },
+      { name: "HR Trello", link: "https://trello.com/b/RjM3SW2T/bloxton-high-rankboard" },
+      { name: "Senior MGMT Trello", link: "https://trello.com/b/mC4pha7H/bloxton-senior-board" },
+      { name: "MGMT Trello", link: "https://trello.com/b/6r42Nyus/bloxton-management-board" },
+      { name: "Report Database", link: "https://docs.google.com/forms/d/e/1FAIpQLSdeqXvfk7i-k_InpagmFcAJccvBBnJzek0NnanNBYnnzozD4g/viewform" },
+      { name: "Backup Guides & More", link: "https://github.com/red-wow/Guides/tree/main/Bloxton" }
+    ]
+  }
+};
+
+function loadGuides(type) {
+  const list = document.getElementById("guideList");
+  const title = document.getElementById("guideTitle");
+
+  title.textContent = type.charAt(0).toUpperCase() + type.slice(1) + " Guides";
+  list.innerHTML = "";
+
+  guides[type].items.forEach(guide => {
+    list.innerHTML += `
+      <li>
+        <img src="${guides[type].image}" alt="${type}">
+        <a href="${guide.link}" target="_blank">${guide.name}</a>
+      </li>
+    `;
+  });
+}
+</script>
+
 </body>
 </html>
+
