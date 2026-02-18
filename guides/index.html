@@ -160,6 +160,7 @@ h1 {
       <button onclick="loadGuides('washiez')">Washiez Guides</button>
       <button onclick="loadGuides('pastriez')">Pastriez Guides</button>
       <button onclick="loadGuides('bloxton')">Bloxton Guides</button>
+      <button onclick="loadGuides('boba')">Boba Cafe Guides</button>
     </div>
 
     <div class="guides">
@@ -240,7 +241,21 @@ const guides = {
       { name: "Report Database", link: "https://docs.google.com/forms/d/e/1FAIpQLSdeqXvfk7i-k_InpagmFcAJccvBBnJzek0NnanNBYnnzozD4g/viewform" },
       { name: "Backup Guides & More", link: "https://github.com/red-wow/Guides/tree/main/Bloxton" }
     ]
-  }
+  },
+  
+  boba: {
+    image: "https://rblx.xyz/images/boba.png",
+    items: [
+      { name: "Main Handbook", link: "https://docs.google.com/document/d/17h2cmDgONd4J9uI76rc56xi02zZNkVyq1V33k-MbO_s/view?tab=t.0" },
+      { name: "Main Handbook (Devforum)", link: "https://devforum.roblox.com/t/boba%C2%AE-public-handbook/2528351" },
+      { name: "MR Guide", link: "https://rblx.xyz/guides/boba/mr-guide.pdf" },
+      { name: "Mod Guide", link: "https://rblx.xyz/guides/boba/mod-guide.pdf" },
+      { name: "Recipe Guide", link: "https://docs.google.com/document/d/1VAWYOXkyk6zZNGlssk3STwdNkfcly-IuVbopuvjN63k/edit?tab=t.0" },
+      { name: "Affilation Standards", link: "https://docs.google.com/document/d/109fUGx8SuW3Eyefylo0xtt6npArLRXZHHU92iOxysWY/edit?tab=t.0" },
+
+    ]
+  },
+
 };
 
 function loadGuides(type) {
